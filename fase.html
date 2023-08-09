@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5. Sistema txikietako fase-trantsizioak &#8212; NANOTERMODINAMIKA</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >let toggleHintShow = 'Click to show';</script>
+    <script >let toggleHintHide = 'Click to hide';</script>
+    <script >let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. Multzo nanokanonikoa: \((T,p,\mu)\) ingurune-aldagaiak" href="tpmu.html" />
+    <link rel="prev" title="4. Multzo isotermo-isobaroa: \((T,p,N)\) ingurune-aldagaiak" href="tpn.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/portada.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NANOTERMODINAMIKA</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   1. Sarrera
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="nanointro.html">
+   <strong>
+    2
+   </strong>
+   . Nanotermodinamikara sarrera
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hill.html">
+   <strong>
+    3
+   </strong>
+   . Sistema Txikien Termodinamika
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tpn.html">
+   <strong>
+    4
+   </strong>
+   . Multzo isotermo-isobaroa:
+   <span class="math notranslate nohighlight">
+    \((T,p,N)\)
+   </span>
+   ingurune-aldagaiak
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   <strong>
+    5
+   </strong>
+   . Sistema txikietako fase-trantsizioak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tpmu.html">
+   <strong>
+    6
+   </strong>
+   . Multzo nanokanonikoa:
+   <span class="math notranslate nohighlight">
+    \((T,p,\mu)\)
+   </span>
+   ingurune-aldagaiak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="adsorbent.html">
+   <strong>
+    7
+   </strong>
+   . Gas ideala eta adsorbatzaile esferiko txikia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ondorioak.html">
+   <strong>
+    Ondorioak
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="euler.html">
+   <strong>
+    <em>
+     A
+    </em>
+   </strong>
+   <em>
+    Eulerren ekuazioa
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="entropy.html">
+   <strong>
+    <em>
+     B
+    </em>
+   </strong>
+   <em>
+    Entropiaren esangura
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gas%20ideala.html">
+   <strong>
+    <em>
+     C
+    </em>
+   </strong>
+   <em>
+    Gas ideal klasikoa, multzo kanonikoan
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="erreferentziak.html">
+   Erreferentziak
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/fase.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffase.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#itzulgarritasuna-eta-oreka-baldintzak">
+   <strong>
+    5.1
+   </strong>
+   Itzulgarritasuna eta oreka-baldintzak
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lehen-ordenako-fase-trantsizioak-t-p-n-sistema-txikietan">
+   <strong>
+    5.2
+   </strong>
+   Lehen ordenako fase-trantsizioak,
+   <span class="math notranslate nohighlight">
+    \((T,p,N)\)
+   </span>
+   sistema txikietan
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adibide-erraza">
+     <strong>
+      5.2.1
+     </strong>
+     Adibide erraza
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#klastoaren-fusioa">
+     <strong>
+      5.2.2
+     </strong>
+     Klastoaren fusioa
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>5. Sistema txikietako fase-trantsizioak</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#itzulgarritasuna-eta-oreka-baldintzak">
+   <strong>
+    5.1
+   </strong>
+   Itzulgarritasuna eta oreka-baldintzak
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lehen-ordenako-fase-trantsizioak-t-p-n-sistema-txikietan">
+   <strong>
+    5.2
+   </strong>
+   Lehen ordenako fase-trantsizioak,
+   <span class="math notranslate nohighlight">
+    \((T,p,N)\)
+   </span>
+   sistema txikietan
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adibide-erraza">
+     <strong>
+      5.2.1
+     </strong>
+     Adibide erraza
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#klastoaren-fusioa">
+     <strong>
+      5.2.2
+     </strong>
+     Klastoaren fusioa
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="sistema-txikietako-fase-trantsizioak">
+<h1><strong>5</strong>. Sistema txikietako fase-trantsizioak<a class="headerlink" href="#sistema-txikietako-fase-trantsizioak" title="Permalink to this headline">¶</a></h1>
+<p>Aparteko zati honetan, tamaina finituko efektuek bi oreka-egoeren arteko fase-trantsizioaren jokamoldeari dakarzkioten berezitasunen inguruan jardungo dugu.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Oharra</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Atal honetan ez da ariketarik egongo. 😎</p>
+<p class="card-text">Hala ere, komenigarria da garapen batzuk norberak egitea… 🙃</p>
+</div>
+</details><div class="section" id="itzulgarritasuna-eta-oreka-baldintzak">
+<span id="itzul"></span><h2><strong>5.1</strong> Itzulgarritasuna eta oreka-baldintzak<a class="headerlink" href="#itzulgarritasuna-eta-oreka-baldintzak" title="Permalink to this headline">¶</a></h2>
+<p>Hill-en teoriari segituz, <span class="math notranslate nohighlight">\(\mathcal{N}(\rightarrow \infty)\)</span> aldakiz osaturiko multzo makroskopikoa aztertuko dugu. Azpisistemei ez diegu askatasun-gradurik abiaraziko, hau da, erabat isolatuta daude, eta (<span class="math notranslate nohighlight">\(E,V,N\)</span>) sorta esleituko diegu. Termodinamikaren bigarren legeak dioenez  <span id="id1">[<a class="reference internal" href="erreferentziak.html#id16" title="T. L. Hill. An Introduction to Statistical Thermodynamics, chapter 2.3. Addison-Wesley, Inc., Massachusetts, 1960.">14</a>]</span>, sistemak, lehen oreka-egoeratik bigarreneranzkora bidean, prozesu infinitesimal itzulezinak pairatuko ditu. Beroriek entropiari ekarpen positiboak sorraraziko dizkiote (<span class="math notranslate nohighlight">\(\mathrm{d}S_{t}&gt;0\)</span>), harik eta oreka berrezartzen den arte (<span class="math notranslate nohighlight">\(\mathrm{d}S_{t}=0\)</span>). Aurrerantzean jazoko den aldaketa oro itzulgarria izango da, sistemak oreka-egoera berriari eutsiko baitio.</p>
+<p>Oro har, prozesu espontaneo bat <a class="reference internal" href="#esp"><span class="std std-ref">6</span></a>. irudiaren bidez ereduzta daiteke. Hasiera batean, kanpo-oztopo baten eraginpean dago sistema. Ondorioz, egoera kuantiko posible guztietatik soilik batzuk edukiko du eskuragai: <span class="math notranslate nohighlight">\(\Omega_{i}(E,V,N)\)</span>.
+Kanpo-galarazpen hori kenduz gero, sistemaren egoera aldatu egingo da. Hain zuzen, aldakiek aurrez debekatuta egon diren egoeretara ere sarbidea izango dute; hortaz, bukaeran, <span class="math notranslate nohighlight">\(\Omega_{f}(E,V,N) &gt; \Omega_{i}(E,V,N)\)</span> izango dugu. Aktibazio-energiaren gutxitzearen edo potentzial baten minimizazioaren bidez gauzatu daiteke prozesu hori.
+Hasierako eztabaidaren harira, entropia maximizatzeak energia askea minimizatzea dakar.</p>
+<div class="figure align-default" id="esp">
+<a class="reference internal image-reference" href="_images/esp.PNG"><img alt="_images/esp.PNG" src="_images/esp.PNG" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Prozesu espontaneoaren ereduztapena.  Gasak kutxaren ezkerraldetik alde egitea ekiditen du bereizte-hormak. Amaieran ez dago hormarik, eta, horren eraginez, bolumenaren osotasunera hedatu da gasa, era espontaneoan. Hasieratik bukaerara, entropia igo egin da.</span><a class="headerlink" href="#esp" title="Permalink to this image">¶</a></p>
+</div>
+<p>Entropiak <span class="math notranslate nohighlight">\(S_{t} = \mathcal{N}k_{\mathrm{B}}\ln \Omega\)</span> betetzen duenez, prozesu finitu eta espontaneoa amaitutakoan,</p>
+<div class="math notranslate nohighlight" id="equation-sesp">
+<span class="eqno">(36)<a class="headerlink" href="#equation-sesp" title="Permalink to this equation">¶</a></span>\[
+\Delta S_{t} = S_{f}^{t} - S_{i}^{t} = \mathcal{N}k_{\mathrm{B}}\ln\left(\frac{\Omega_f}{\Omega_i}\right) &gt; 0 \; .
+\]</div>
+<p>Termodinamikaren lege garrantzitsuenetariko baten esangura biltzen du ekuazio horrek. Hain zuzen, aurkako prozesua era espontaneoan jazoko balitz, <span class="math notranslate nohighlight">\(\Delta S_{t} &lt; 0\)</span> izango genuke, eta bigarren printzipioa hautsiko litzateke. Hala eta guztiz ere, <span class="math notranslate nohighlight">\(\mathcal{N} \rightarrow \infty\)</span> onartu dugunez, <strong>multzoan</strong>, alegia, sistema guzti-guztietan,  horrelakorik gertatzeko probabilitatea kasik nulua da, hau da,</p>
+<div class="math notranslate nohighlight" id="equation-probcont">
+<span class="eqno">(37)<a class="headerlink" href="#equation-probcont" title="Permalink to this equation">¶</a></span>\[
+ P_{f \rightarrow i}^{t} := \frac{\Omega_{i}}{\Omega_{f}} = \exp\left(-\frac{\Delta S_{t}}{\mathcal{N}k_{\mathrm{B}}}\right) \rightarrow 0 \; .
+ \]</div>
+<p>Alabaina, <strong>azpisistemetan</strong>, <span class="math notranslate nohighlight">\(\mathcal{N}\)</span> barik <span class="math notranslate nohighlight">\(N\)</span> izango genuke, eta, beraz, <span class="math notranslate nohighlight">\( P_{f\rightarrow i}\propto e^{-N}\)</span>. Bada, <span class="math notranslate nohighlight">\(N\)</span> magnitudeak ez du zertan izan adierazpenaren balioa baztergarri bihurrarazteko bezain handia. Hori dela eta, <span class="math notranslate nohighlight">\(N\)</span> oso txikia bada, baliteke sistema txiki jakin batzuetan bigarren printzipioa urratzen duen (<span class="math notranslate nohighlight">\(\Delta S &lt; 0\)</span>) aurkako prozesua era espontaneoan behatzea! Nolanahi ere, dakargun gogora aldakien propietateak multzotik ondorioztatzean datzala Hill-en teoria. Beraz, hasteko, multzo osoaren entropiaren aldakuntzari erreparatu beharko diogu, eta bertatik sistema txikietara igaro, <span class="math notranslate nohighlight">\(\Delta S = \Delta S_{t}/\mathcal{N}\)</span>  betetzen dela aintzat hartuz.</p>
+<p>Eztabaida honen harira, <a class="reference internal" href="tpmu.html#tpmu"><span class="std std-ref">6.4</span></a> atalean sistema txikiz osatutako multzoaren banatze-prozesua aztertuko dugu. Berebat, <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> banatze-potentzialak prozesu horren itzulgarritasunean duen eraginari erreparatuko diogu.</p>
+</div>
+<div class="section" id="lehen-ordenako-fase-trantsizioak-t-p-n-sistema-txikietan">
+<span id="fase1order"></span><h2><strong>5.2</strong> Lehen ordenako fase-trantsizioak, <span class="math notranslate nohighlight">\((T,p,N)\)</span> sistema txikietan<a class="headerlink" href="#lehen-ordenako-fase-trantsizioak-t-p-n-sistema-txikietan" title="Permalink to this headline">¶</a></h2>
+<p>Demagun sistema makroskopiko bat hasierako faseko egoeratik  bukaerako beste batera eraman nahi dugula. Lehenbiziko  egoeran, bere egoera-ekuazioa funtzio jarraitua eta deribagarria da, hots, zuzen definituta dago. Alabaina, aldiuneren batean bigarren faserako bat-bateko aldakuntza jasango du, ez-jarraitutasun bortitzak pairatuz; alegia, sisteman lehen ordenako fase-trantsizioa gertatuko da (<a class="reference internal" href="#faseirudi"><span class="std std-ref">7a</span></a> irudia).</p>
+<div class="figure align-default" id="faseirudi">
+<a class="reference internal image-reference" href="_images/faseirudi.PNG"><img alt="_images/faseirudi.PNG" src="_images/faseirudi.PNG" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text"><span class="math notranslate nohighlight">\((a)\)</span> Limite termodinamikoan, lehen ordenako fase-trantsizioan sistemak <span class="math notranslate nohighlight">\(p-\bar{V}\)</span> <strong>lerro isotermoari</strong> jarraitzen dio, <span class="math notranslate nohighlight">\(A\)</span> egoeratik <span class="math notranslate nohighlight">\(B\)</span>-ra zuzenean igaroz. Hain zuzen, <strong>kurba etena</strong> egonkortasunaren aurka doa, bertan komprimagarritasuna negatiboa baita, hots, <span class="math notranslate nohighlight">\(\kappa_{T} = -\left(\partial p/\partial V\right)_{T} &lt; 0\)</span>. <span class="math notranslate nohighlight">\((b)\)</span> <strong>Sistema txikien kasuan</strong>,  <span class="math notranslate nohighlight">\(A\)</span> eta <span class="math notranslate nohighlight">\(B\)</span> egoerak aldi berean egongo dira <span class="math notranslate nohighlight">\(\Delta p\)</span> gunean. Limite makroskopikoan, argi eta garbi, <span class="math notranslate nohighlight">\(\Delta p \rightarrow p_{0}\)</span> beteko da.</span><a class="headerlink" href="#faseirudi" title="Permalink to this image">¶</a></p>
+</div>
+<p>Sistema txikia baldin balitz, aldiz, trantsizioa ez litzateke hain zorrotza izango. Aurki ikusiko dugunez, <span class="math notranslate nohighlight">\(\Delta p\)</span> presio-tartearen hedadurak lotura zuzena du sistemaren tamainarekin (<span class="math notranslate nohighlight">\(N\)</span>). Baina horri ekin aurretik, bada ildo beretik doan argitu beharreko beste kontu bat. Izan ere, <a class="reference internal" href="#faseirudi"><span class="std std-ref">7b</span></a> irudiak aditzera ematen duenez, hasierako <span class="math notranslate nohighlight">\(\bar{V} _ {A}\)</span> eta bukaerako <span class="math notranslate nohighlight">\(\bar{V}_ {B}\)</span> bolumenen inguruan agertzen diren fluktuazioak hautemangarriak dira. Beste hitzez esateko, <span class="math notranslate nohighlight">\(\bar{V}_ {A}\)</span> eta <span class="math notranslate nohighlight">\(\bar{V}_{B}\)</span> bolumenen inguruetara ere zertxobait aldenduko da <span class="math notranslate nohighlight">\(P(V)\)</span> probabilitatea. Bada, azaldutako eboluzioaren isla <a class="reference internal" href="#prob"><span class="std std-ref">8</span></a>. irudia da.</p>
+<div class="figure align-default" id="prob">
+<a class="reference internal image-reference" href="_images/prob.PNG"><img alt="_images/prob.PNG" src="_images/prob.PNG" style="height: 250px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Limite termodinamikoan probabilitateak <span class="math notranslate nohighlight">\(P(V)=\delta(V-\bar{V}_{A}) + \delta(V-\bar{V}_{B})\)</span> betetzen du. Sistema txiki batean, aldiz, kurba zabalagoak lortzen dira. Hortaz, <em>bi egoeren hurbilketa</em> deritzonari ez dio hertsiki segituko. Edonola ere, tarteko edozein <span class="math notranslate nohighlight">\(\bar{V}_{0}\)</span> bolumenean <span class="math notranslate nohighlight">\(P(\bar{V}_{0})\)</span> baztergarria da. Hori guztia dela eta, fase-trantsizioaren eremua <span class="math notranslate nohighlight">\(A\)</span> eta <span class="math notranslate nohighlight">\(B\)</span> egoeren arteko konbinazioa dela esan daiteke.</span><a class="headerlink" href="#prob" title="Permalink to this image">¶</a></p>
+</div>
+<p>Aurrekoaren harira, <span class="math notranslate nohighlight">\(Q(T,V,N)\)</span> partizio-funtzio kanonikotik abiatuz, sistemak <span class="math notranslate nohighlight">\(V_{i}\)</span> bolumena izateko probabilitatea definituko dugu:</p>
+<div class="math notranslate nohighlight" id="equation-pvi">
+<span class="eqno">(38)<a class="headerlink" href="#equation-pvi" title="Permalink to this equation">¶</a></span>\[
+P(V_{i}) := \frac{Q(T,V_{i},N)e^{- pV_{i}/k_{\mathrm{B}}T}}{\sum_{V_{i}}Q(T,V_{i},N)e^{-pV_{i}/k_{\mathrm{B}}T}} = \frac{Q(T,V_{i},N)e^{-pV_{i}/k_{\mathrm{B}}T}}{\Delta(T,p,N)}\;.
+\]</div>
+<p>Orain, <a class="reference internal" href="#prob"><span class="std std-ref">8</span></a>. irudiaren inguruko iruzkinei jarraikiz,  <span class="math notranslate nohighlight">\(P(\bar{V} _ {A,B})/P(\bar{V} _ {0})\)</span> erlazioa kalkulatuko dugu, zeina <em>bi egoeren hurbilketaren</em> erabileraren zilegitasunaren adierazlea izango den. Azterketa Fisika Estatistikotik bideratuko dugu, <span id="id2">[<a class="reference internal" href="erreferentziak.html#id17" title="T. L. Hill. Statistical Mechanics - Principles and Selected Applications, chapter Appendix 9. Dover Publications, Inc., New York, 1956.">15</a>]</span> liburuaren laguntzaz. Kontua da <span class="math notranslate nohighlight">\(A\)</span> eta <span class="math notranslate nohighlight">\(B\)</span> egoeren erdian dagoen egoera batean jatorrizko biak ere azalduko direla, bereizte-geruza baten bidez bananduta. Bertako molekula-kopuruaren magnitude-ordena <span class="math notranslate nohighlight">\(N^{2/3}\)</span> izango da, eta, hortaz, molekula horien arteko elkarrekintzek <span class="math notranslate nohighlight">\(A(T,V,N)\)</span> energiarako ekarpena izango dute, zeina, hain zuzen, <span class="math notranslate nohighlight">\(N^{2/3}k_{\mathrm{B}}T\)</span> ordenakoa izango den. Puntu horren inguruko partizio-funtzioak, hartara, itxura hau izango du:</p>
+<div class="math notranslate nohighlight">
+\[
+Q(T,\bar{V} _ {0},N) = e^{-A(T,V,N)/k_{\mathrm{B}}T-N^{2/3}} = Q(T,V,N)e^{-N^{2/3}} \; .
+\]</div>
+<p>Berori, <a class="reference internal" href="#equation-pvi">(38)</a> adierazpenari jarraituz, probabilitatearekiko proportzionala denez, honakoa beteko da, puntu kritiko baten inguruan izan ezik:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{P(\bar{V}_{A,B})}{P(\bar{V}_{0})} \propto e^{N^{2/3}}  \; .
+\]</div>
+<p>Beraz, puntu kritikoak bazter utzita, sistema txikiegia ez bada, probabilitate-banaketarako ekarpen soilak <span class="math notranslate nohighlight">\(A\)</span> eta <span class="math notranslate nohighlight">\(B\)</span> egoerenak izango dira, eta onartutako hurbilketa zuzena izango da.</p>
+<p>Horiek horrela, darabilgun orain Sistema Txikien Termodinamikaren tresnerian oinarritutako arrazoibidea, lorturiko ondorioak berresteko. Eraiki dezagun <span class="math notranslate nohighlight">\(\mathcal{N}\)</span> aldaki duen multzo isotermo-isobaroa. <span class="math notranslate nohighlight">\(A\)</span> eta <span class="math notranslate nohighlight">\(B\)</span> egoeretan, hurrenez hurren, <span class="math notranslate nohighlight">\(\mathcal{N}_ {A}\)</span> eta <span class="math notranslate nohighlight">\(\mathcal{N}_ {B}\)</span> azpisistema dago. <a class="reference internal" href="tpn.html#tpn-azter"><span class="std std-ref">4.1</span></a> ataletik, aldakiko Gibbs-en energia askea <span class="math notranslate nohighlight">\(F_{A,B} := N\; \widehat{\mu}_{A,B}\)</span> dela gogora ekarriz,
+eta banaketa posible guztien ekarpena kontuan hartuz (konfigurazio-mailako entropia), energia totala hauxe dugu:</p>
+<div class="math notranslate nohighlight" id="equation-gibbstot">
+<span class="eqno">(39)<a class="headerlink" href="#equation-gibbstot" title="Permalink to this equation">¶</a></span>\[
+F_{t} = \mathcal{N}_ {A}\left(N\;\widehat{\mu}_ {A}\right) +  \mathcal{N}_ {B}\left(N\;\widehat{\mu}_ {B}\right) - k_{\mathrm{B}}T\ln\left(\frac{\mathcal{N}!}{\mathcal{N}_ {A}!\;\mathcal{N}_{B}!}\right) \; .
+\]</div>
+<p>Multzoak orekan izango duen <span class="math notranslate nohighlight">\(\mathcal{N}_ {A}/\mathcal{N}_ {B}\)</span> frakzioari erreparatzea da gure jomuga, bertatik eskuratuko baitugu bigarren analisi honetarako beharrezkoa izango dugun informazioa. Multzoa bera makroskopikoa denez, zilegi izango zaigu Stirling-en hurbilketaz baliatzea, hau da, <span class="math notranslate nohighlight">\(\ln \mathcal{N}! \approx \mathcal{N}\ln \mathcal{N} - \mathcal{N}\)</span> idatziko dugu. Hala, oreka-egoeran izango dugu <span class="math notranslate nohighlight">\(\mathcal{N}_ {A}\)</span> kopurua finkatuz, eta <span class="math notranslate nohighlight">\(\mathcal{N}_ {B} = \mathcal{N}- \mathcal{N}_{A}\)</span> idatziz,</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{\partial F_{t}}{\partial \mathcal{N}_ {A}}\right)_{T,p,N,\mathcal{N}} = 0
+\]</div>
+<p>betearazi, eta, horrela,</p>
+<div class="math notranslate nohighlight" id="equation-fracnanb">
+<span class="eqno">(40)<a class="headerlink" href="#equation-fracnanb" title="Permalink to this equation">¶</a></span>\[
+\frac{\mathcal{N}_ {A}}{\mathcal{N}_ {B}} = \left(\exp\frac{\widehat{\mu}_ {B} - \widehat{\mu}_ {A}}{k_{\mathrm{B}}T}\right)^N
+\]</div>
+<p>berdintzara iritsiko gara. So egin diezaiogun berorri.</p>
+<p>Oro har, <a class="reference internal" href="tpn.html#tpn-azter"><span class="std std-ref">4.1</span></a> ataleko azalpenei jarraituz, potentzial kimiko integrala ingurune-aldagaien funtzioa da, hau da, <span class="math notranslate nohighlight">\(\widehat{\mu}_ {A,B} = \widehat{\mu}_ {A,B}(T,p,N)\)</span>. Hortaz, <span class="math notranslate nohighlight">\(p\)</span> presioa finka dezakegu, halako moldez non bi potentzialak bat etorriko diren (<span class="math notranslate nohighlight">\(\widehat{\mu}_ {A} = \widehat{\mu}_ {B}\)</span>). Presioaren balio hori <a class="reference internal" href="#faseirudi"><span class="std std-ref">7a</span></a> irudiko <span class="math notranslate nohighlight">\(p_{0}\)</span> delakoa da. Era berean, <a class="reference internal" href="#equation-fracnanb">(40)</a> ekuazioaren arabera, <span class="math notranslate nohighlight">\(\mathcal{N}_ {A} = \mathcal{N}_ {B}\)</span>  beteko da. Baina, <span class="math notranslate nohighlight">\(p_{0}\)</span> baliotik zertxobait aldenduko balitz presioa, halako moduan non <span class="math notranslate nohighlight">\(\widehat{\mu}_ {A} \gtrsim \widehat{\mu}_ {B}\)</span> edo <span class="math notranslate nohighlight">\(\widehat{\mu}_ {B} \gtrsim \widehat{\mu}_ {A}\)</span>, <span class="math notranslate nohighlight">\(N\rightarrow\infty\)</span> limitean sistema ia guztiek <span class="math notranslate nohighlight">\(B\)</span> eta <span class="math notranslate nohighlight">\(A\)</span> egoeretara egingo lukete jauzi, hurrenez hurren, eta <span class="math notranslate nohighlight">\(\mathcal{N}_ {B} \gg \mathcal{N}_ {A}\)</span> edo <span class="math notranslate nohighlight">\(\mathcal{N}_ {A} \gg \mathcal{N}_ {B}\)</span> beteko litzateke. Bestela esanda, <a class="reference internal" href="#equation-fracnanb">(40)</a> ekuazioaren limite makroskopikoa bateragarria da <em>bi egoeren hurbilketarekin</em>. Edonola ere, <span class="math notranslate nohighlight">\(N\)</span> behar bezain handia ez balitz, aurrekoa behatzeko presioa nabarmen aldendu beharko litzateke <span class="math notranslate nohighlight">\(p_{0}\)</span> puntutik. Hori dela eta, <span class="math notranslate nohighlight">\(\Delta p\)</span> presio-tarte aski zabal batean <span class="math notranslate nohighlight">\(\mathcal{N} _ {B} \gtrsim \mathcal{N}_ {A}\)</span> edo <span class="math notranslate nohighlight">\(\mathcal{N}_ {A} \gtrsim \mathcal{N}_{B}\)</span> behatuko genuke, eta egoera batetik besterako jauzia leunagoa litzateke.</p>
+<p>Fase-trantsizioen azterketari buru emateko, aipatu beharrekoa da <span class="math notranslate nohighlight">\(p=p_{0}\)</span> puntuan (<span class="math notranslate nohighlight">\(T,p,N\)</span>) ingurune-aldagaiek konstante iraun behar dutela. Orduan, berdintza manten dadin, balio horien inguruko aldakuntzek <span class="math notranslate nohighlight">\(\mathrm{d}\widehat{\mu} _ {A}=\mathrm{d}\widehat{\mu}_{B}\)</span> bete behar dute nahitaez. Baldintza hori eta <a class="reference internal" href="tpn.html#equation-dmuhat">(22)</a> ekuazioa erabiliz, hona helduko gara:</p>
+<div class="math notranslate nohighlight" id="equation-sasb">
+<span class="eqno">(41)<a class="headerlink" href="#equation-sasb" title="Permalink to this equation">¶</a></span>\[
+\frac{S_{A}-S_{B}}{N}\;\mathrm{d}T + \frac{V_{B}-V_{A}}{N}\;\mathrm{d}p + \frac{(\mu_{B}-\mu_{A}) + (\widehat{\mu} _ {A} - \widehat{\mu}_{B})}{N}\;\mathrm{d}N = 0 \; .
+\]</div>
+<p>Jakina, aztergai dugun puntuan <span class="math notranslate nohighlight">\(\Delta \widehat{\mu} = \widehat{\mu} _ {B}-\widehat{\mu}_{A}=0\)</span> betetzen da. Hori kontuan izanik, gainontzeko magnitudeen aldakuntzekin honako erlazioak lortuko ditugu:</p>
+<div class="math notranslate nohighlight" id="equation-neweq">
+<span class="eqno">(42)<a class="headerlink" href="#equation-neweq" title="Permalink to this equation">¶</a></span>\[
+\boxed{\left(\frac{\partial p}{\partial T}\right)_ {N} = \frac{\Delta S}{\Delta V}\quad ; \quad \left(\frac{\partial T}{\partial N}\right)_ {p} = \frac{\Delta \mu}{N\Delta \mathrm{s}}\quad ; \quad \left(\frac{\partial p}{\partial N}\right)_{T} = -\frac{\Delta \mu}{N\Delta \mathrm{v}}} \quad ,
+\]</div>
+<p>non <span class="math notranslate nohighlight">\(\mathrm{v} = V/N\)</span> eta <span class="math notranslate nohighlight">\(\mathrm{s} = S/N\)</span> diren. Ekuazio-sortako bigarren eta hirugarren erlazioak ez dira Termodinamikan ageri. Beroriek argiro iradokitzen dute tenperatura eta presioa ez direla, oro har, magnitude intentsiboak. Bada, ildo beretik, eta, aurrerapen gisara, <a class="reference internal" href="#cryst-melt"><span class="std std-ref">5.2.2</span></a> adibidean, tamainarekiko menpekoa den <span class="math notranslate nohighlight">\(T\)</span> tenperatura lortuko dugu.</p>
+<div class="section" id="adibide-erraza">
+<span id="fase-simple"></span><h3><strong>5.2.1</strong> Adibide erraza<a class="headerlink" href="#adibide-erraza" title="Permalink to this headline">¶</a></h3>
+<p><em>Bi egoeren hurbilketaren</em> zuzentasuna era kuantitatiboan adieraztea da adibide honen xedea. Demagun <span class="math notranslate nohighlight">\(A\)</span> eta <span class="math notranslate nohighlight">\(B\)</span> egoeretako <span class="math notranslate nohighlight">\(\bar{\mathrm{v}}_ {A}\)</span> eta <span class="math notranslate nohighlight">\(\bar{\mathrm{v}}_ {B}\)</span> bolumenak <span class="math notranslate nohighlight">\(p\)</span> eta <span class="math notranslate nohighlight">\(N\)</span> aldagaiekiko askeak direla. Berebat, <span class="math notranslate nohighlight">\(\widehat{\mu} = \widehat{\mu}_ {A,B}(p=p_{0})\)</span> idatziko dugu. Bada, <a class="reference internal" href="tpn.html#equation-dmuhat">(22)</a> ekuaziotik <span class="math notranslate nohighlight">\(\partial \widehat{\mu}_ {A,B}/\partial p = \bar{V}_ {A,B}/N = \bar{\mathrm{v}}_{A,B}\)</span> erlazioa erauziz eta berori integratuz,</p>
+<div class="math notranslate nohighlight" id="equation-muhatab">
+<span class="eqno">(43)<a class="headerlink" href="#equation-muhatab" title="Permalink to this equation">¶</a></span>\[
+\widehat{\mu}_ {A,B} = \widehat{\mu} + \bar{\mathrm{v}}_ {A,B}\left(p-p_{0}\right)
+\]</div>
+<p>berdintzetara iritsiko gara. Ekuazio horren bidez <a class="reference internal" href="#equation-fracnanb">(40)</a> erlazioa berridatziko dugu:</p>
+<div class="math notranslate nohighlight" id="equation-nanbex">
+<span class="eqno">(44)<a class="headerlink" href="#equation-nanbex" title="Permalink to this equation">¶</a></span>\[
+\frac{\mathcal{N}_ {A}}{\mathcal{N}_ {B}} = \exp\left[-N\frac{\left(\bar{\mathrm{v}}_ {A} - \bar{\mathrm{v}}_ {B}\right)\left(p-p_{0}\right)}{k_{\mathrm{B}}T}\right]\; .
+\]</div>
+<p>Era berean, ekuazio beretik guztizko bolumena idatziz,</p>
+<div class="math notranslate nohighlight" id="equation-vtotex">
+<span class="eqno">(45)<a class="headerlink" href="#equation-vtotex" title="Permalink to this equation">¶</a></span>\[
+\left(\frac{\partial F}{\partial p}\right)_{T,N
+} := \bar{V} = \frac{\mathcal{N}_ {A}}{\mathcal{N}}\bar{V}_ {A} + \frac{\mathcal{N}_ {B}}{\mathcal{N}}\bar{V}_ {B}\equiv P_{A}\bar{V}_ {A} +  P_{B}\bar{V}_{B} \; ,
+\]</div>
+<p>eta, <span class="math notranslate nohighlight">\(P_{A} = (\bar{\mathrm{v}} - \bar{\mathrm{v}}_ {B}) / (\bar{\mathrm{v}}_ {A} - \bar{\mathrm{v}}_ {B})\)</span> eta <span class="math notranslate nohighlight">\(P_{B}=1-P_{A}\)</span> direla ohartuz, hona iritsiko gara:</p>
+<div class="math notranslate nohighlight" id="equation-fasesimplegraph">
+<span class="eqno">(46)<a class="headerlink" href="#equation-fasesimplegraph" title="Permalink to this equation">¶</a></span>\[
+\frac{(\bar{\mathrm{v}}_ {A} - \bar{\mathrm{v}}_ {B})(p-p_{0})}{k_{\mathrm{B}}T} = -\frac{1}{N}\ln\left[\frac{(\bar{\mathrm{v}} - \bar{\mathrm{v}}_ {B})/(\bar{\mathrm{v}}_ {A} - \bar{\mathrm{v}}_ {B})}{1-(\bar{\mathrm{v}} - \bar{\mathrm{v}}_ {B})/(\bar{\mathrm{v}}_ {A} - \bar{\mathrm{v}}_{B})}\right] \; .
+\]</div>
+<p>Eraiki dezagun <a class="reference internal" href="#equation-fasesimplegraph">(46)</a> ekuazioaren grafikoa:</p>
+<div class="figure align-default" id="faseplot">
+<a class="reference internal image-reference" href="_images/faseplot.PNG"><img alt="_images/faseplot.PNG" src="_images/faseplot.PNG" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Sistema txikietako fase-trantsizioen ereduztapen sinple honek agerian uzten du <span class="math notranslate nohighlight">\(N&lt;40\)</span> kasuetako bi kurbetan <span class="math notranslate nohighlight">\(A\)</span> eta <span class="math notranslate nohighlight">\(B\)</span> egoeren baterako existentziak presio-tarte handia hartzen duela. Era berean, <span class="math notranslate nohighlight">\(N=200\)</span> kurbak jada <a class="reference internal" href="#faseirudi"><span class="std std-ref">7a</span></a> irudiaren tankera aurkezten du.</span><a class="headerlink" href="#faseplot" title="Permalink to this image">¶</a></p>
+</div>
+<p>Errepara bekio <a class="reference internal" href="#faseplot"><span class="std std-ref">9</span></a>. irudiari. Ohartu gaitezen grafikoa ezkerrerantz 90<span class="math notranslate nohighlight">\(^\circ\)</span> biratuz gero, helize-haril adibideko <a class="reference internal" href="tpn.html#nhplot"><span class="std std-ref">3</span></a>. irudiko kurba-sortarekin bat etorriko dela. Hori dela eta, bi adibide horiek bateragarriak dira. Bestela esanda, sendotasun handiagoz baiezta dezakegu helize-haril katean ere bi egoeren arteko fase-trantsizioa gauzatzen dela limite makroskopikoan.</p>
+</div>
+<div class="section" id="klastoaren-fusioa">
+<span id="cryst-melt"></span><h3><strong>5.2.2</strong> Klastoaren fusioa<a class="headerlink" href="#klastoaren-fusioa" title="Permalink to this headline">¶</a></h3>
+<p>Bigarren adibide honetan, klasto esferiko baten fusio-tenperaturan sistemaren beraren tamainak duen eragina aztertuko dugu. Beraz, <em>bi egoeren hurbilketari</em> segituz, <span class="math notranslate nohighlight">\(A\)</span> egoera solidoa (<span class="math notranslate nohighlight">\(S\)</span>) eta <span class="math notranslate nohighlight">\(B\)</span> egoera likidoa (<span class="math notranslate nohighlight">\(L\)</span>) ditugu. Sistema txikien Gibbs-en energia askeak gai <strong>lineal</strong> makroskopikoa (<span class="math notranslate nohighlight">\(\propto N\)</span>) ez ezik, <strong>gainazal-efektuei</strong> (<span class="math notranslate nohighlight">\(\propto N^{2/3}\)</span>) zein <strong>errotazioari</strong> (<span class="math notranslate nohighlight">\(\propto \ln N\)</span>) dagozkion ekarpen txikiak ere biltzen ditu, hau da,</p>
+<div class="math notranslate nohighlight" id="equation-fklasto">
+<span class="eqno">(47)<a class="headerlink" href="#equation-fklasto" title="Permalink to this equation">¶</a></span>\[
+F(T,p,N) := N\widehat{\mu} = Nf(T,p) + N^{2/3}a(T,p) + \ln N \; b(T) \; .
+\]</div>
+<p>Gauzak horrela, multzoan makroskopikoki behatuko diren bi egoeren <em>baterako existentziaren gunean</em> ardaztuko dugu azterketa. Bertako tenperatura eta presioa <span class="math notranslate nohighlight">\(T_{\infty}\)</span> eta <span class="math notranslate nohighlight">\(p_{\infty}\)</span> izendatuko ditugu. Zehazki, oreka-egoera horretan, sistemaren tamainak tenperaturari sorrarazten dizkion desbideraketak kalkulatuko ditugu, presioa konstante mantenduz. Bada, <a class="reference internal" href="#fase1order"><span class="std std-ref">5.2</span></a> ataleko azalpenei jarraikiz, gune horretan <span class="math notranslate nohighlight">\(\Delta \widehat{\mu} = \widehat{\mu}_ {L} - \widehat{\mu}_{S} = 0\)</span> beteko da. Baldintza hori eta <a class="reference internal" href="#equation-fklasto">(47)</a> ekuazioa erabiliz, honako hauxe izango dugu:</p>
+<div class="math notranslate nohighlight" id="equation-muhatklasto">
+<span class="eqno">(48)<a class="headerlink" href="#equation-muhatklasto" title="Permalink to this equation">¶</a></span>\[
+\Delta \widehat{\mu}(T,p_{\infty},N) = \Delta f(T,p_{\infty}) + N^{-1/3}\Delta a(T,p_{\infty}) + \frac{\ln N}{N}\Delta b(T) = 0 \; .
+\]</div>
+<p>Bertan <span class="math notranslate nohighlight">\(T\)</span> aldagaia agerrarazteko, <span class="math notranslate nohighlight">\(\Delta f\)</span> eta <span class="math notranslate nohighlight">\(\Delta a\)</span> funtzioen <span class="math notranslate nohighlight">\(T=T_{\infty}\)</span> puntuaren inguruko Taylorren hurbilketa idatzi, eta lehenengo gai ez-nulua ez beste guztiak baztertuko ditugu:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta f(T,p_{\infty}) \approx \left(\frac{\partial \Delta f}{\partial T}\right)_ {T_{\infty}}\left(T-T_{\infty}\right) = -\Delta \mathrm{s}_ {\infty}(T-T_{\infty})
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\Delta a(T,p_{\infty}) \approx \Delta a(T_{\infty},p_{\infty}) \; .
+\]</div>
+<div class="admonition-oharra admonition">
+<p class="admonition-title">Oharra</p>
+<p>Baterako existentziaren gunean bi egoeren <span class="math notranslate nohighlight">\(f_{S}(T,p)\)</span> eta <span class="math notranslate nohighlight">\(f_{L}(T,p)\)</span> gai makroskopikoak bat datoz. Izan ere, limite termodinamikoan horixe da behatzen duguna: fase batetik besterako bat-bateko jauzia. Bertan azaltzen diren desbideraketak ekarpen txikien ondoriozkoak dira soilik. Hori dela eta, <span class="math notranslate nohighlight">\(\Delta f(T_{\infty},p_{\infty}) = 0\)</span> betetzen dela onartu behar dugu.</p>
+</div>
+<p>Adierazpenok <a class="reference internal" href="#equation-muhatklasto">(48)</a> ekuazioan sartuz, honakoa da tenperaturak beteko duen ekuazioa:</p>
+<div class="math notranslate nohighlight" id="equation-t-ez-int">
+<span class="eqno">(49)<a class="headerlink" href="#equation-t-ez-int" title="Permalink to this equation">¶</a></span>\[
+\boxed{T = T_{\infty} + N^{-1/3}\frac{\Delta a (T_{\infty},p_{\infty})}{\Delta \mathrm{s}_ {\infty}} + \frac{\ln N}{N}\frac{\Delta b(T_{\infty})}{\Delta \mathrm{s}_{\infty}}} \; .
+\]</div>
+<p>Agerikoa da limite makroskopikoan behatuko den tenperaturari gehitu dizkiogun ekarpen txikiek izaera estentsiboa dutela.</p>
+<p>Kapitulu honetan zehar aztertu ditugun fase-trantsizioekin loturiko iruzkinek biziki indartu dute <a class="reference internal" href="tpn.html#tpn-azter"><span class="std std-ref">4.1</span></a> atalean aurresandakoa. Batik bat, <strong><span class="math notranslate nohighlight">\(\widehat{\mu}\)</span> potentzial kimiko integralaren</strong> berezko izaera finkatzeko lagungarriak izan zaizkigu. Hain zuzen, ikusi dugu berori azpisistema osoek pairatzen dituzten aldaketen adierazlea dela (<a class="reference internal" href="#equation-fracnanb">(40)</a> ekuazioa); eta, hartara, sistema txiki horiez osatutako <strong>multzoaren propietateei</strong> erasaten diela. Aitzitik, <strong><span class="math notranslate nohighlight">\(\mu\)</span> potentzial kimiko diferentzialak sistema txiki soilei</strong> eragiten dieten banakako molekulen aldakuntzak hartzen ditu aintzakotzat. Nanotermodinamikak zorrozki bereizten ditu bi efektu horiek.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="tpn.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><strong>4</strong>. Multzo isotermo-isobaroa: <span class="math notranslate nohighlight">\((T,p,N)\)</span> ingurune-aldagaiak</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="tpmu.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>6</strong>. Multzo nanokanonikoa: <span class="math notranslate nohighlight">\((T,p,\mu)\)</span> ingurune-aldagaiak</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mikel Garitano Telleria<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

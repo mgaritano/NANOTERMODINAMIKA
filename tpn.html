@@ -1,0 +1,688 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. Multzo isotermo-isobaroa: \((T,p,N)\) ingurune-aldagaiak &#8212; NANOTERMODINAMIKA</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/myfile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >let toggleHintShow = 'Click to show';</script>
+    <script >let toggleHintHide = 'Click to hide';</script>
+    <script >let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5. Sistema txikietako fase-trantsizioak" href="fase.html" />
+    <link rel="prev" title="3. Sistema Txikien Termodinamika" href="hill.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/portada.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NANOTERMODINAMIKA</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   1. Sarrera
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="nanointro.html">
+   <strong>
+    2
+   </strong>
+   . Nanotermodinamikara sarrera
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hill.html">
+   <strong>
+    3
+   </strong>
+   . Sistema Txikien Termodinamika
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   <strong>
+    4
+   </strong>
+   . Multzo isotermo-isobaroa:
+   <span class="math notranslate nohighlight">
+    \((T,p,N)\)
+   </span>
+   ingurune-aldagaiak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fase.html">
+   <strong>
+    5
+   </strong>
+   . Sistema txikietako fase-trantsizioak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tpmu.html">
+   <strong>
+    6
+   </strong>
+   . Multzo nanokanonikoa:
+   <span class="math notranslate nohighlight">
+    \((T,p,\mu)\)
+   </span>
+   ingurune-aldagaiak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="adsorbent.html">
+   <strong>
+    7
+   </strong>
+   . Gas ideala eta adsorbatzaile esferiko txikia
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ondorioak.html">
+   <strong>
+    Ondorioak
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="euler.html">
+   <strong>
+    <em>
+     A
+    </em>
+   </strong>
+   <em>
+    Eulerren ekuazioa
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="entropy.html">
+   <strong>
+    <em>
+     B
+    </em>
+   </strong>
+   <em>
+    Entropiaren esangura
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gas%20ideala.html">
+   <strong>
+    <em>
+     C
+    </em>
+   </strong>
+   <em>
+    Gas ideal klasikoa, multzo kanonikoan
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="erreferentziak.html">
+   Erreferentziak
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/tpn.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftpn.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multzoaren-azterketa">
+   <strong>
+    4.1
+   </strong>
+   Multzoaren azterketa
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ariketa">
+     Ariketa
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adibidea-helize-haril-trantsizioa">
+   <strong>
+    4.2
+   </strong>
+   Adibidea: helize-haril trantsizioa
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Ariketa
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adibidea-gas-ideal-klasikoa-multzo-isotermo-isobaroan">
+   <strong>
+    4.3
+   </strong>
+   Adibidea: Gas ideal klasikoa, multzo isotermo-isobaroan
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>4. Multzo isotermo-isobaroa: (T,p,N) ingurune-aldagaiak</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multzoaren-azterketa">
+   <strong>
+    4.1
+   </strong>
+   Multzoaren azterketa
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ariketa">
+     Ariketa
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adibidea-helize-haril-trantsizioa">
+   <strong>
+    4.2
+   </strong>
+   Adibidea: helize-haril trantsizioa
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Ariketa
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adibidea-gas-ideal-klasikoa-multzo-isotermo-isobaroan">
+   <strong>
+    4.3
+   </strong>
+   Adibidea: Gas ideal klasikoa, multzo isotermo-isobaroan
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="multzo-isotermo-isobaroa-t-p-n-ingurune-aldagaiak">
+<h1><strong>4</strong>. Multzo isotermo-isobaroa: <span class="math notranslate nohighlight">\((T,p,N)\)</span> ingurune-aldagaiak<a class="headerlink" href="#multzo-isotermo-isobaroa-t-p-n-ingurune-aldagaiak" title="Permalink to this headline">¶</a></h1>
+<p>Kapitulu honen fisikari heldu baino lehen, honako honi erreparatu behar diogu: <a class="reference internal" href="tpmu.html#tpmu"><span class="std std-ref">6</span></a>. atalean ikusiko dugunez, multzo nanokanonikorako <span class="math notranslate nohighlight">\((T,p,\mu)\)</span> trantsizioa <span class="math notranslate nohighlight">\(Q(T,V,N)\)</span> partizio-funtzio kanonikotik abiatzen dugu normalean, Legendreren transformazioen laguntzaz. Kontua da tarteko multzotzat makrokanonikoa <span class="math notranslate nohighlight">\((T,V,\mu)\)</span> hautatuz gero, zenbaitetan bidea malkartsua gertatuko zaigula. Bada, bolumenean barreneko integrala barik <span class="math notranslate nohighlight">\(N\)</span> partikula-kopuruan zeharreko batukaria kalkulatzeak lana arinduko digu.
+Hala, ibilbide hori multzo isotermo-isobaroan <span class="math notranslate nohighlight">\((T,p,N)\)</span> barrena burutzea mesedegarria izango zaigu oso. Bestetik, ingurune-aldagai horien bidez <span class="math notranslate nohighlight">\(T\)</span> eta <span class="math notranslate nohighlight">\(p\)</span> finkatzen dituen ingurune batean makromolekula edo koloide konprimaezin eta hedagarria ezaugarritu daiteke. Ildo horretatik, <a class="reference internal" href="#helix-coil"><span class="std std-ref">4.2</span></a> azpiatalean lan honetako lehenbiziko adibide garrantzitsuari helduko diogu, hurbilketa bereziekin bada ere.</p>
+<p>Horiek horrela, multzo estatistiko honi azterketa sakonagoa eskaintzea merezi du.</p>
+<div class="section" id="multzoaren-azterketa">
+<span id="tpn-azter"></span><h2><strong>4.1</strong> Multzoaren azterketa<a class="headerlink" href="#multzoaren-azterketa" title="Permalink to this headline">¶</a></h2>
+<p>Kontrol-aldagaitzat <span class="math notranslate nohighlight">\((T,p,N)\)</span> dituzten sistema txikiek <span class="math notranslate nohighlight">\(\bar{E}=E_{t}/\mathcal{N}\)</span>, <span class="math notranslate nohighlight">\(\bar{V}=V_{t}/\mathcal{N}\)</span> eta <span class="math notranslate nohighlight">\(N=N_{t}/\mathcal{N}\)</span> aldagai estentsiboak izango dituzte.</p>
+<div class="section" id="ariketa">
+<h3>Ariketa<a class="headerlink" href="#ariketa" title="Permalink to this headline">¶</a></h3>
+<p>Aurreko esaldian aipatutakoa aintzat hartuz, eta <a class="reference internal" href="hill.html#hillsec"><span class="std std-ref">3</span></a>. ataleko azalpenei segituz, eraiki honako adierazpenak:</p>
+<p><span class="math notranslate nohighlight">\((a)\)</span> Multzo isotermo-isobaroaren Gibbs-en ekuazioa eta <span class="math notranslate nohighlight">\(X(T,p,N)\)</span> aldaki-energia. Emaitzak azaldu.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Erantzuna</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="math notranslate nohighlight" id="equation-dettpn">
+<span class="eqno">(15)<a class="headerlink" href="#equation-dettpn" title="Permalink to this equation">¶</a></span>\[
+\mathrm{d}E_{t}(S_{t},V_{t},N,\mathcal{N}) = T\mathrm{d}S_{t} - p\mathrm{d}V_{t} + \mu \mathcal{N}\mathrm{d}N + (\mathcal{E}+\mu N)\mathrm{d}\mathcal{N}
+\]</div>
+<div class="math notranslate nohighlight" id="equation-xtpn">
+<span class="eqno">(16)<a class="headerlink" href="#equation-xtpn" title="Permalink to this equation">¶</a></span>\[
+X(T,p,N) = \mathcal{E} + \mu N := \left(\frac{\partial E_{t}}{\partial \mathcal{N}}\right)_{S_{t},V_{t},N} := \widehat{\mu}N \; .
+\]</div>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Azalpenak</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Kasu honetan, <span class="math notranslate nohighlight">\(N\)</span> ingurune-aldagaia agerrarazi behar dugu ekuazioan, <span class="math notranslate nohighlight">\(\mathrm{d}N_{t} = \mathcal{N}\mathrm{d}N + N\mathrm{d}\mathcal{N}\)</span> erabiliz. Berorrek <span class="math notranslate nohighlight">\(N_{t}\)</span> magnitudeak aldaezin irautea galarazten du. Aldaki-energia multzo honen izaeraren isla da. Hala, aldaki bat txertatzean, guztizko bolumena zein energia birbanatu egingo dira, sistema txikiei aldagaiok askatasun osoz eraldatu baitiezazkiekegu. Aitzitik, <span class="math notranslate nohighlight">\(N\)</span> partikula-kopuruak aldaezin iraun behar duenez sistema orotan, multzoaren barne-energiak ekarpen kimikoa ere jasango luke, bere ikuspuntutik kanpotik <span class="math notranslate nohighlight">\(N\)</span> partikuladun sorta berri bat gehitzen arituko gintzaizkioke eta. Aipaturiko ekarpen kimikoa <span class="math notranslate nohighlight">\(\widehat{\mu}\)</span> potentzialaren bidez ereduztatu behar dugu, ez baitauka azpisistemei esleitutako <span class="math notranslate nohighlight">\(\mu\)</span> potentzialaren esanahi bera.</p>
+</div>
+</details><p><span class="math notranslate nohighlight">\((b)\)</span> Sistema txikien Gibbs-en ekuazioa eta barne-energiaren adierazpena.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Erantzuna</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="math notranslate nohighlight" id="equation-detpn">
+<span class="eqno">(17)<a class="headerlink" href="#equation-detpn" title="Permalink to this equation">¶</a></span>\[
+\mathrm{d}\bar{E} = T\mathrm{d}S - p\mathrm{d}\bar{V} + \mu \mathrm{d}N
+\]</div>
+<div class="math notranslate nohighlight" id="equation-etpn">
+<span class="eqno">(18)<a class="headerlink" href="#equation-etpn" title="Permalink to this equation">¶</a></span>\[
+\bar{E} = TS - p\bar{V} + \widehat{\mu}N
+\]</div>
+</div>
+</details><p><span class="math notranslate nohighlight">\((c)\)</span> Gibbs-en energia askea (<span class="math notranslate nohighlight">\(F(T,p,N)\)</span>). Hortik abiatuta, idatzi magnitude integrala eta diferentziala erlazionatzen dituen adierazpena.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Erantzuna</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="math notranslate nohighlight" id="equation-ftpn">
+<span class="eqno">(19)<a class="headerlink" href="#equation-ftpn" title="Permalink to this equation">¶</a></span>\[
+F(T,p,N) := \bar{E} - TS + p\bar{V} = \widehat{\mu}N
+\]</div>
+<div class="math notranslate nohighlight" id="equation-dftpn">
+<span class="eqno">(20)<a class="headerlink" href="#equation-dftpn" title="Permalink to this equation">¶</a></span>\[
+\mathrm{d}F(T,p,N) = -S\mathrm{d}T + \bar{V}\mathrm{d}p + \mu\mathrm{d}N \;
+\]</div>
+<div class="math notranslate nohighlight" id="equation-mumuhat">
+<span class="eqno">(21)<a class="headerlink" href="#equation-mumuhat" title="Permalink to this equation">¶</a></span>\[
+\boxed {\mu := \left[\frac{\partial(\widehat{\mu}N)}{\partial N}\right]_{T, p} = \widehat{\mu} + N\left(\frac{\partial \widehat{\mu}}{\partial N}\right)_{T,p} \quad ; \quad \mathcal{E} =  (\widehat{\mu} - \mu)N}
+\]</div>
+</div>
+</details><p><strong>———————————————————————————————————————————–</strong></p>
+<p>Gaineko <a class="reference internal" href="#equation-ftpn">(19)</a> ekuazioan sistema txikiaren Gibbs-en energia askearen eta <strong>potentzial kimiko integralaren</strong> arteko erlazioa agertzen da: <span class="math notranslate nohighlight">\(F := \widehat{\mu}N\)</span>. Azken horrek, <span class="math notranslate nohighlight">\(\mu\)</span> <strong>potentzial kimiko diferentzialarekin</strong> batera, banatze-potentziala finkatzen du. Ildo horri segituz, <span class="math notranslate nohighlight">\(\widehat{\mu}\)</span> potentzialak ekuazio hau beteko du:</p>
+<div class="math notranslate nohighlight" id="equation-dmuhat">
+<span class="eqno">(22)<a class="headerlink" href="#equation-dmuhat" title="Permalink to this equation">¶</a></span>\[
+\boxed{\mathrm{d}\widehat{\mu} = -\frac{S}{N}\mathrm{d}T + \frac{\bar{V}}{N}\mathrm{d}p - \frac{\mathcal{E}}{N^2}\mathrm{d}N}
+\]</div>
+<p>Interesgarria litzateke <span class="math notranslate nohighlight">\(\mathrm{d}\mu\)</span> potentzialari ere tankerako adierazpen bat esleitzea. Horretarako, Maxwell-en erlazioak lortu behar ditugu, deribatuen trukatze-propietateak erabiliz, adibidez,</p>
+<div class="math notranslate nohighlight">
+\[
+\left(\frac{\partial \mu}{\partial T}\right)_{p, N} := \frac{\partial}{\partial T}\left(\frac{\partial F}{\partial N}\right)_{T, p} =  \frac{\partial}{\partial N}\left(\frac{\partial F}{\partial T}\right)_{p, N} := -\left(\frac{\partial S}{\partial N}\right)_{T, p}  \; .
+\]</div>
+<p>Horrenbestez,</p>
+<div class="math notranslate nohighlight" id="equation-dmu">
+<span class="eqno">(23)<a class="headerlink" href="#equation-dmu" title="Permalink to this equation">¶</a></span>\[
+\boxed{\mathrm{d}\mu = -\left(\frac{\partial S}{\partial N}\right)_{T,p}\mathrm{d}T + \left(\frac{\partial \bar{V}}{\partial N}\right)_{T,p}\mathrm{d}p - \frac{1}{N}\left(\frac{\partial \mathcal{E}}{\partial N}\right)_{T,p}\mathrm{d}N} \; .
+\]</div>
+<p>Ikus daitekeen legez, <a class="reference internal" href="#equation-dmuhat">(22)</a> eta <a class="reference internal" href="#equation-dmu">(23)</a> ekuazioek bi potentzial kimikoen izaera integrala eta diferentziala azaleratu dituzte, hurrenez hurren. Berebat, aldagai estentsiboek <span class="math notranslate nohighlight">\(N\)</span> aldagaiarekiko azaltzen duten ez-linealtasunaren erakusle dira. Halaber, <a class="reference internal" href="#equation-dmu">(23)</a> ekuazioko azkenengo gaia <span class="math notranslate nohighlight">\(\left(\partial \mu/\partial N\right)_{T,p}\mathrm{d}N\)</span> dugu, zeina ez baita nulua. Horrek <span class="math notranslate nohighlight">\(\mu\)</span> potentzial kimikoak orokorki jokaera ez-intentsiboa duela diosku, hau da, <span class="math notranslate nohighlight">\(\mu = \mu(T,p,N)\)</span> erlazioari darraikiola. Eskualde makroskopikoan bi adierazpenok bat etorriko dira, hain zuzen, <a class="reference internal" href="nanointro.html#equation-gibbs-duhem">(3)</a> erlazioarekin (Gibbs-Duhem).</p>
+<p>Jarraian datorkigun <a class="reference internal" href="#helix-coil"><span class="std std-ref">4.2</span></a> adibidean <span class="math notranslate nohighlight">\(\widehat{\mu}\)</span> eta <span class="math notranslate nohighlight">\(\mu\)</span> potentzial-bikotea kalkulatu, eta kasu zehatz horretan beroriek bereizten dituzten ekarpen finituen itxura behatuko dugu.</p>
+</div>
+</div>
+<div class="section" id="adibidea-helize-haril-trantsizioa">
+<span id="helix-coil"></span><h2><strong>4.2</strong> Adibidea: helize-haril trantsizioa<a class="headerlink" href="#adibidea-helize-haril-trantsizioa" title="Permalink to this headline">¶</a></h2>
+<p>Esku artean dugun sistema <a class="reference internal" href="#heco"><span class="std std-ref">3</span></a>. irudiko dimentsio bakarreko soka da. Berori, hurrenez hurren, <span class="math notranslate nohighlight">\(l_{H}\)</span> eta <span class="math notranslate nohighlight">\(l_{C}\)</span> luzerako <span class="math notranslate nohighlight">\(n_{H}\)</span> helize- eta <span class="math notranslate nohighlight">\(n_{C} = N - n_{H}\)</span> haril-unitatez osatuta dago. Bestalde, bero-iturri batekin ukipen termikoan dagoela onartuko dugu, eta <span class="math notranslate nohighlight">\(N\)</span> aldaezin mantenduko dela. Azterketa termodinamikoa <span class="math notranslate nohighlight">\((T,f,N)\)</span> aldagai-sortaren bitartez gauzatuko dugu, <span class="math notranslate nohighlight">\(f\)</span> indarraren konjokatu estentsiboa <span class="math notranslate nohighlight">\(\bar{l}\)</span>, katearen batez besteko luzera, hartuta.</p>
+<div class="figure align-default" id="id1">
+<span id="heco"></span><a class="reference internal image-reference" href="_images/helix-coil.PNG"><img alt="_images/helix-coil.PNG" src="_images/helix-coil.PNG" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">“Helize-haril” kateak helize-unitateak (<span class="math notranslate nohighlight">\(H\)</span>) eta haril-unitateak (<span class="math notranslate nohighlight">\(C\)</span>) dauzka. Mutur banatan <span class="math notranslate nohighlight">\(f\)</span>  indarra eragingo diogu. Guztizko unitate-kopuruari dagokionez, <span class="math notranslate nohighlight">\(N\rightarrow \infty\)</span> hurbilketa asintotikora jotzen ez badugu, katean sistema txikien berezitasunak azaleratuko dira. Oroz gain, beroriek makroskopikoki intentsiboak diren aldagaiei nabarmenki erasango diete.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Demagun orain haril-unitateak (<span class="math notranslate nohighlight">\(C\)</span>) soilik muturretan koka daitezkeela. Irudiko kasuan, hortaz, aukera hauek genituzke eskura: <span class="math notranslate nohighlight">\(C\;H\;H\;H\;C\)</span> ; <span class="math notranslate nohighlight">\(C\;C\;H\;H\;H\)</span> ; <span class="math notranslate nohighlight">\(H\;H\;H\;C\;C\)</span>. Orokortuz, baldintza horrek sistemari <span class="math notranslate nohighlight">\(g(n_{H}) = N-n_{H}+1\)</span> endekapena sorraraziko lioke. Jakina, <span class="math notranslate nohighlight">\(H\)</span>-unitaterik ez balego, <span class="math notranslate nohighlight">\(g=1\)</span> izango genuke, sistemak bakarrik <span class="math notranslate nohighlight">\(C\)</span>-unitateak edukiko lituzke eta. <span class="math notranslate nohighlight">\(C\)</span>- eta <span class="math notranslate nohighlight">\(H\)</span>-unitateen partizio-funtzio kanonikoak <span class="math notranslate nohighlight">\(q_{H}(T)\)</span> eta <span class="math notranslate nohighlight">\(q_{C}(T)\)</span> izendatuko ditugu. Beraz, kate osora zabalduz, <span class="math notranslate nohighlight">\(Q(T,l,N)=q_{C}^{n_{C}}q_{H}^{n_{H}}\)</span> genuke. Horiek horrela, <span class="math notranslate nohighlight">\(\Delta(T,f,N)\)</span> partizio-funtzioa eraikiko dugu:</p>
+<div class="math notranslate nohighlight" id="equation-d">
+<span class="eqno">(24)<a class="headerlink" href="#equation-d" title="Permalink to this equation">¶</a></span>\[
+\Delta := \sum_{l} Q(T,l,N)e^{fl/k_{\mathrm{B}}T}
+     = \sum_{n_{H}=0}^{N} g(n_{H})q_{C}^{N-n_{H}}q_{H}^{n_{H}}e^{\left[\left(N-n_{H}\right)l_{C} + n_{H}l_{H}\right]f/k_{\mathrm{B}}T} \; .
+\]</div>
+<p>Batukariaren kalkulua saihesteko, eta, batez ere, bertatik eratortzen diren magnitudeen adierazpenak laburbiltzeko, hurbilketa nahiko gordina erabiliko dugu: unitate guztiak soilik <span class="math notranslate nohighlight">\(H\)</span> egoeran edo soilik <span class="math notranslate nohighlight">\(C\)</span> egoeran egon daitezke. Irudiko adibidean, esaterako, <span class="math notranslate nohighlight">\(H\;H\;H\;H\;H\)</span> eta <span class="math notranslate nohighlight">\(C\;C\;C\;C\;C\)</span> sortak izan ahalko genituzke. Horrela, bada, batukaritik <span class="math notranslate nohighlight">\(n_{H}=0\)</span> eta <span class="math notranslate nohighlight">\(n_{H}=N\)</span> gaiak erauziz, eta gai bakoitzaren endekapena aintzakotzat hartuz, hona iritsiko gara:</p>
+<div class="math notranslate nohighlight" id="equation-d-short">
+<span class="eqno">(25)<a class="headerlink" href="#equation-d-short" title="Permalink to this equation">¶</a></span>\[
+\Delta = q_{C}^Ne^{Nl_{C}f/k_{\mathrm{B}}T} + q_{H}^Ne^{Nl_{H}f/k_{\mathrm{B}}T} = r_{C}^N(1 + r^N)\; .
+\]</div>
+<p>Ekuazioa <span class="math notranslate nohighlight">\(r_{C,H}(T,f) = q_{C,H}(T)\exp(fl_{C,H}/k_{\mathrm{B}}T)\)</span> eta <span class="math notranslate nohighlight">\(r=r_{H}/r_{C}\)</span> txertatuz trinkotu dugu. Aipatzekoa da <a class="reference internal" href="#equation-d-short">(25)</a> partizio-funtzioak adierazten duen eredu sinplifikatua ez-errealista izanagatik, adibide didaktiko honen xedeari ez diola eragingo.</p>
+<p>Ezer baino lehen, azter dezagun partizio-funtzioaren <span class="math notranslate nohighlight">\(N\rightarrow \infty\)</span> limitea:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Delta(T,f,N) =
+    \begin{cases}
+      r_{C}^N &amp; \text{$r&lt;1$ bada.}\Rightarrow N = n_{C} \\
+      r_{H}^N &amp; \text{$r&gt;1$ bada.}\Rightarrow N = n_{H}
+    \end{cases}  
+\end{split}\]</div>
+<p>Hortik agerikoa da <span class="math notranslate nohighlight">\(r=1\)</span> denean, katean bat-bateko helize-haril <strong>fase-trantsizioa</strong> gertatuko dela (limite termodinamikoan).</p>
+<p>Hurrengo pausoa, <a class="reference internal" href="#equation-d-short">(25)</a> ekuaziotik abiatuz, sistemaren termodinamika ondorioztatzea da. Gibbs-en energia askea <span class="math notranslate nohighlight">\(F(T,f,N) := -k_{\mathrm{B}}T\ln\Delta\)</span> dugu.</p>
+<div class="section" id="id2">
+<h3>Ariketa<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p><span class="math notranslate nohighlight">\((a)\)</span> Kalkulatu <span class="math notranslate nohighlight">\(\widehat{\mu}\)</span> eta <span class="math notranslate nohighlight">\(\mu\)</span> potentzial kimikoak, <span class="math notranslate nohighlight">\(F(T,f,N)\)</span> adierazpenaren laguntzaz.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Erantzuna</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="math notranslate nohighlight" id="equation-muhathelix">
+<span class="eqno">(26)<a class="headerlink" href="#equation-muhathelix" title="Permalink to this equation">¶</a></span>\[
+\widehat{\mu} := \frac{F}{N} = -k_{\mathrm{B}}T\left[\ln r_{C} + \frac{1}{N}\ln(1+r^N)\right]
+\]</div>
+<div class="math notranslate nohighlight" id="equation-muhelix">
+<span class="eqno">(27)<a class="headerlink" href="#equation-muhelix" title="Permalink to this equation">¶</a></span>\[
+\mu := \left(\frac{\partial F}{\partial N}\right)_{T,f} = -k_{\mathrm{B}}T\left[\ln r_{C} + \frac{r^N\ln r}{1 + r^N}\right]
+\]</div>
+</div>
+</details><p><span class="math notranslate nohighlight">\((b)\)</span> Eraiki banatze-potentziala, eta aztertu sistemaren tamainaren arabera azaltzen duen portaera, <span class="math notranslate nohighlight">\(r = 0,5 \; ;  \; r = 0,98\)</span> eta <span class="math notranslate nohighlight">\(r=1,05\)</span> balioak erabiliz.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Erantzuna</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="math notranslate nohighlight" id="equation-epsilonhelix">
+<span class="eqno">(28)<a class="headerlink" href="#equation-epsilonhelix" title="Permalink to this equation">¶</a></span>\[
+\mathcal{E} = (\widehat{\mu}-\mu)N = -k_{\mathrm{B}}T\left[\ln(1+r^N) - N\frac{r^N\ln r}{1 + r^N}\right]
+\]</div>
+<div class="figure align-default" id="epsilon-tfn">
+<span id="eps-graph"></span><a class="reference internal image-reference" href="_images/epsilon_tfn.PNG"><img alt="_images/epsilon_tfn.PNG" src="_images/epsilon_tfn.PNG" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Ekarpen finituen bilakaera banatze-potentzialaren indarraren baitan dago. Tamaina handitu ahala, berori ahulduz doa, eta sistemak eremu makroskopikorantz jotzen du. Era berean, <span class="math notranslate nohighlight">\(r\)</span> erlazioak eskualde nanotermodinamikoaren hedaduran eragin zuzena dauka. Fase-trantsizioaren puntura gerturatu ahala (<span class="math notranslate nohighlight">\(r\rightarrow1\)</span>) geroz eta tarte zabalagoa hartuko du, eta <span class="math notranslate nohighlight">\(\mathcal{E}\rightarrow\mathcal{E}_{0} = -k_{\mathrm{B}}T \ln 2\)</span> konstanterantz gerturatuko da.</span><a class="headerlink" href="#epsilon-tfn" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><p><strong>———————————————————————————————————————————–</strong></p>
+<p>Hari bertsutik, adibide honen esangura handieneko alderdiari helduko diogu, kateak <span class="math notranslate nohighlight">\(r\)</span> erlazioarekin duen bilakaera helize-unitateen batez besteko frakzioaren bidez ereduztatuz (<span class="math notranslate nohighlight">\(\bar{n} _ {H}/N \)</span>). Orain arte ez bezala, aurrerantzean <span class="math notranslate nohighlight">\(n_{H}\)</span> kopuruari marratxoa erantsiko diogu, berorrek zehaztuko baitu, hain zuzen, katearen batez besteko luzera: <span class="math notranslate nohighlight">\(\bar{l}(\bar{n} _ {H}) = (N-\bar{n} _ {H})l_{C} + \bar{n} _ {H}l_{H}\)</span>. Bada, horretarako, <span class="math notranslate nohighlight">\(\bar{n} _ {H}\)</span> itxarotako balioa eskuratu behar dugu, sistemaren partizio-funtziotik abiatuz:</p>
+<div class="math notranslate nohighlight" id="equation-nhdef">
+<span class="eqno">(29)<a class="headerlink" href="#equation-nhdef" title="Permalink to this equation">¶</a></span>\[
+\bar{n}_{H} := \frac{\sum _ {n _{H}} n _{H}Q(T,l(n _ {H}), N)e^{fl(n _{H})/k _{\mathrm{B}}T}}{\sum _ {n _{H}} Q(T,l(n _ {H}), N)e^{fl(n _{H})/k _{\mathrm{B}}T}} \equiv \frac{\sum _ {n _{H}} n _{H}Q(T,l(n _ {H}), N)e^{fl(n _{H})/k _{\mathrm{B}}T}}{\Delta(T,f,N)}
+\]</div>
+<p>Gauzak horrela, hasteko <a class="reference internal" href="#equation-d">(24)</a> ekuazioko batukaritik <span class="math notranslate nohighlight">\(n_{H}=0\)</span> gaia atera, eta <span class="math notranslate nohighlight">\(\Delta\)</span> honela berridatziko dugu:</p>
+<div class="math notranslate nohighlight" id="equation-dnew">
+<span class="eqno">(30)<a class="headerlink" href="#equation-dnew" title="Permalink to this equation">¶</a></span>\[
+    \Delta = r_{C}^N\left[1+\sum_{n_{H}=1}^{N}\left(N-n_{H}+1\right)r^{n_{H}}\right]\; .
+\]</div>
+<p>Hala, <a class="reference internal" href="#equation-nhdef">(29)</a> definizioari jarraituz,</p>
+<div class="math notranslate nohighlight" id="equation-nbar">
+<span class="eqno">(31)<a class="headerlink" href="#equation-nbar" title="Permalink to this equation">¶</a></span>\[
+\bar{n}_{H} := \frac{r_{C}^N\left[0+\sum_{n_{H}=1}^{N}n_{H}\left(N-n_{H}+1\right)r^{n_{H}}\right]}{\Delta} = r\frac{\partial}{\partial r}\ln \Delta \; .
+\]</div>
+<div class="tip admonition">
+<p class="admonition-title">Iradokizuna</p>
+<p>Nahi izanez gero, egiaztatu aurreko ekuazioaren bi aldeak bat datozela. 🙃</p>
+</div>
+<p>Bada, <a class="reference internal" href="#equation-nbar">(31)</a> ekuazioan <a class="reference internal" href="#equation-d-short">(25)</a> adierazpena ordezkatuz gero, azkenean ere! iritsiko gara helmugara:</p>
+<div class="math notranslate nohighlight" id="equation-fraction-n">
+<span class="eqno">(32)<a class="headerlink" href="#equation-fraction-n" title="Permalink to this equation">¶</a></span>\[
+\boxed{\frac{\bar{n} _ {H}}{N} = \frac{r}{N}\frac{\partial}{\partial r}\ln\left[r_{C}^N(1 + r^N)\right] = \frac{r^N}{1+r^N}}\; .
+\]</div>
+<p>Errepara diezaiogun orain ekuazio horren adierazpen grafikoari:</p>
+<div class="figure align-default" id="hc-phase">
+<span id="nhplot"></span><a class="reference internal image-reference" href="_images/hc_phase.PNG"><img alt="_images/hc_phase.PNG" src="_images/hc_phase.PNG" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Helize-unitateen batez besteko frakzioaren kurbek eite bitxia eta susmagarria dute. Izan ere, badirudi intentsibotasuna ez dela dirudien bezain kontzeptu tinkoa.</span><a class="headerlink" href="#hc-phase" title="Permalink to this image">¶</a></p>
+</div>
+<p>Lortutako emaitzak direla eta, berehalako geldialdia egin beharrean gaude, ezinbestean.</p>
+<p>Hurrera gakizkion, <strong>arreta handiz</strong>, <a class="reference internal" href="#nhplot"><span class="std std-ref">5</span></a>. irudiko kurba-sortari. Izatez, Termodinamikaren ikuspuntutik, batez besteko frakzioak izaera INTENTSIBOA beharko luke izan, zero ordenako funtzio Euler-homogeneo orok bezalaxe. Baina <span class="math notranslate nohighlight">\(N\)</span> aldatu ahala, <span class="math notranslate nohighlight">\(\bar{n}_{H}/N\)</span> kurbaren formak ez dirau bere horretan!! Horrek, argi eta garbi, aztergai dugun magnitudeak tamainarekiko menpekotasuna duela iradokitzen du, hots, ESTENTSIBOA dela. Preseski, sistema txikia denean (<span class="math notranslate nohighlight">\(N=2\)</span>), tamaina laukoiztean, helize-unitateen frakzioak aldaketa bortitza pairatu du, ez ordea <span class="math notranslate nohighlight">\(N=40\)</span>tik <span class="math notranslate nohighlight">\(N=200\)</span>erakoa bezain gogorra. Berezitasun horiek  <a class="reference internal" href="#eps-graph"><span class="std std-ref">4</span></a>. irudiak islatzen duen banatze-potentzialaren bilakaeraren ondorio dira.</p>
+<p>Ondorioz, <span class="math notranslate nohighlight">\(N=200\)</span> inguruan <span class="math notranslate nohighlight">\(\bar{n}_{H}/N\)</span>ren jokaera intentsiboa berrezarri dela esan liteke, arestian aipatutako bat-bateko helize-haril fase-trantsizioa igarri dakioke eta. Nolanahi ere, sailkapen zorrotzari atxikiz, soilik <span class="math notranslate nohighlight">\(N\rightarrow \infty\)</span> limiteak deuseztatuko ditu erabat tamaina finituko efektuak, maila makroskopikora jauzi egitea ahalbidetuz. Osterantzean, helize-haril katea sistema txikia da.</p>
+<p>Fase-trantsizioen gaian murgildutakoan (<a class="reference internal" href="fase.html#fase"><span class="std std-ref">5.</span></a> atalean) izango dugu <a class="reference internal" href="#nhplot"><span class="std std-ref">5</span></a>. irudira bihurtzeko beta egokia.</p>
+</div>
+</div>
+<div class="section" id="adibidea-gas-ideal-klasikoa-multzo-isotermo-isobaroan">
+<span id="gitpn"></span><h2><strong>4.3</strong> Adibidea: Gas ideal klasikoa, multzo isotermo-isobaroan<a class="headerlink" href="#adibidea-gas-ideal-klasikoa-multzo-isotermo-isobaroan" title="Permalink to this headline">¶</a></h2>
+<p>Bigarren sistemaren azterketa <a class="reference internal" href="gas%20ideala.html#gitvn"><span class="std std-ref"><em><strong>C</strong></em></span></a> eranskineko emaitzetatik abiatuko dugu. Hasteko, askatasun-gradu mekanikoa abiarazi, eta multzo kanonikotik isotermo-isobarora igaroko gara. Partizio-funtzio berria eraikitzerakoan, <a class="reference internal" href="gas%20ideala.html#equation-qtvngi">(89)</a> ekuazioko zaharrari dagokion Legendreren transformazioa aplikatuko diogu.</p>
+<div class="math notranslate nohighlight" id="equation-dtpn-gi">
+<span class="eqno">(33)<a class="headerlink" href="#equation-dtpn-gi" title="Permalink to this equation">¶</a></span>\[
+\Delta(T,p,N) := \int_{0}^{\infty}\mathrm{d}\left(\frac{pV}{k_{\mathrm{B}}T}\right)\left[\frac{V^N}{N!\Lambda^{3N}}\right]\;e^{-pV/k_{\mathrm{B}}T} = \left(\frac{k_{\mathrm{B}}T}{p\Lambda^3}\right)^N \; .
+\]</div>
+<div class="admonition-oharra admonition">
+<p class="admonition-title">Oharra</p>
+<div class="math notranslate nohighlight">
+\[
+ \int_{0}^{\infty}\mathrm{d}x \; x^n e^{-ax} = \Gamma(n+1)a^{-n-1}
+ \]</div>
+</div>
+<p>Aipatzekoa da jada ez dela <span class="math notranslate nohighlight">\(N!\)</span> agertzen. Are gehiago, Gibbs-en energia askea idatziz gero,</p>
+<div class="math notranslate nohighlight" id="equation-ftpngi">
+<span class="eqno">(34)<a class="headerlink" href="#equation-ftpngi" title="Permalink to this equation">¶</a></span>\[
+F(T,p,N) = Nk_{\mathrm{B}}T\ln\left(\frac{p\Lambda^3}{k_{\mathrm{B}}T}\right) \; ,
+\]</div>
+<p>berorrek uneoro jokaera makroskopikoa erakusten duela ohartuko gara, lehen mailako funtzio Euler-homogeneoa da eta, hots, lineala. Ondorioz, <span class="math notranslate nohighlight">\(\widehat{\mu}=\mu\)</span>, eta, beraz, <span class="math notranslate nohighlight">\(\mathcal{E}=0\)</span>. Aipatzekoa da multzo kanonikoan <span class="math notranslate nohighlight">\(\mathcal{E}&gt;0\)</span> lortu dugula (ikus <a class="reference internal" href="gas%20ideala.html#equation-epsilon-tvn">(93)</a> ekuazioa).</p>
+<p>Beha dezagun arestiko emaitzok entropian zer-nolako eragina duten:</p>
+<div class="math notranslate nohighlight" id="equation-stpngi">
+<span class="eqno">(35)<a class="headerlink" href="#equation-stpngi" title="Permalink to this equation">¶</a></span>\[
+\boxed{ S(T,p,N) := -\left(\frac{\partial F}{\partial T}\right)_{p,N}=Nk_{\mathrm{B}}\left[\ln\left(\frac{\bar{V}}{\Lambda^3N}\right) + \frac{5}{2}\right]} \; .
+\]</div>
+<p>Berori <a class="reference internal" href="gas%20ideala.html#equation-stvngi">(92)</a> ekuazioarekin alderatuz (eta <span class="math notranslate nohighlight">\(Nk_{\mathrm{B}}T/p = \bar{V}=V\)</span> onartuz), azken gai negatiboak ageri ez direla ohartuko gara, Sackur-Tetrode adierazpena berreskuratu baitugu; alegia, multzo kanonikoaren aldean, askatasun-gradu bat abiarazteak banatze-potentziala desagerrarazi, eta, horrekin batera, entropia handitu egin du!</p>
+<p>Aurrerago, <a class="reference internal" href="tpmu.html#tpmu"><span class="std std-ref">6</span></a>. atalean, gas ideala azpisistema erabat askez osaturiko multzo nanokanonikoan berraztertuko dugu. Bertan azalduko diren efektu berriek berebiziko adierazgarritasuna emango diote Nanotermodinamikari.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="hill.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><strong>3</strong>. Sistema Txikien Termodinamika</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="fase.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>5</strong>. Sistema txikietako fase-trantsizioak</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mikel Garitano Telleria<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
